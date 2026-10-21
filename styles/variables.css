@@ -1,1 +1,49 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  /* Шрифты */
+  --font-main: Inter, Arial, sans-serif;
+  --font-accent: PressStart2P, 'Courier New', monospace;
+  --weight-text: 'wght' 400;
+  --weight-title: 'wght' 785;
+
+  /* Цвета */
+  --main-color: #000;
+  --block-color: #fff;
+  --accent-color: #000;
+  --button-text-color: #fff;
+  --label-color: #fff;
+  --label-stroke-color: #000;
+  --contour-color: #000;
+  --animation-fill-color: #f00;
+  --backdrop-color: rgb(0 0 0 / 75%);
+
+  /* Фон страницы: сетка из полос и плавное затемнение сверху вниз */
+  --page-background:
+    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+
+  /* Размеры */
+  --block-width: clamp(320px, 48.2vw, 694px);
+  --border-width: 2px;
+  --page-padding: clamp(50px, 7vw, 100px);
+  --cards-gap: clamp(50px, 7vw, 100px);
+  --header-padding: clamp(40px, 9.5vw, 130px) 20px clamp(25px, 2vw, 30px);
+  --logo-font-size: clamp(32px, 4.3vw, 62px);
+  --title-font-size: clamp(12px, 1.6vw, 23px);
+  --card-title-font-size: 18px;
+  --text-font-size: 18px;
+  --button-font-size: 14px;
+  --label-font-size: clamp(12px, 1.2vw, 16px);
+  --card-text-padding: 25px;
+}
+
+@media (width <= 375px) {
+  :root {
+    --block-width: 100%;
+    --card-title-font-size: 16px;
+    --text-font-size: 16px;
+    --card-text-padding: 25px 20px;
+  }
+}
